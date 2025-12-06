@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELITE STORE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    
+    <header>
+        <div class="logo">
+            <img src="assessts/logo.png" alt="Elite Store Logo" class="logo-img">
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#watches">Watches</a>
+            <a href="#perfumes">Perfumes</a>
+            <a href="#iphones">iPhones</a>
+            <a href="#accessories">Accessories</a>
+            <a href="#cart" class="cart-btn">🛒 Cart</a>
+        </nav>
+    </header>
+
+    
+    <section id="banner">
+        <h2>✨ Mega Sale on Perfumes, Watches & iPhones! ✨</h2>
+        <p>Shop luxury watches, perfumes, latest iPhones, and premium accessories at unbeatable prices.</p>
+        <button onclick="shopNow()">Shop Now</button>
+    </section>
+
+    
+    <section id="watches">
+        <h2>⌚ Luxury Watches</h2>
+        <div class="product-grid">
+            <div class="product"><img src="assessts/watch1.jpeg"><h3>Watch 1</h3><p>Rs 13,000</p><button onclick="addToCart('Watch 1')">Add to Cart</button></div>
+            <div class="product"><img src="assessts/watch2.jpeg"><h3>Watch 2</h3><p>Rs 20,000</p><button onclick="addToCart('Watch 2')">Add to Cart</button></div>
+            <div class="product"><img src="assessts/watch3.jpeg"><h3>Watch 3</h3><p>Rs 12,500</p><button onclick="addToCart('Watch 3')">Add to Cart</button></div>
+            <div class="product"><img src="assessts/watch4.jpeg"><h3>Watch 4</h3><p>Rs 11,000</p><button onclick="addToCart('Watch 4')">Add to Cart</button></div>
+            <div class="product"><img src="assessts/watch5.jpeg"><h3>Watch 5</h3><p>Rs 30,500</p><button onclick="addToCart('Watch 5')">Add to Cart</button></div>
+            <div class="product"><img src="assessts/watch6.jpeg"><h3>Watch 6</h3><p>Rs 9,000</p><button onclick="addToCart('Watch 6')">Add to Cart</button></div>
+            <div class="product"><img src="assessts/watch7.jpeg"><h3>Watch 7</h3><p>Rs 21,000</p><button onclick="addToCart('Watch 7')">Add to Cart</button></div>
+            <div class="product"><img src="assessts/watch8.jpeg"><h3>Watch 8</h3><p>Rs 42,000</p><button onclick="addToCart('Watch 8')">Add to Cart</button></div>
+            <div class="product"><img src="assessts/watch9.jpeg"><h3>Watch 9</h3><p>Rs 70,000</p><button onclick="addToCart('Watch 9')">Add to Cart</button></div>
+            <div class="product"><img src="assessts/watch10.jpeg"><h3>Watch 10</h3><p>Rs 26,500</p><button onclick="addToCart('Watch 10')">Add to Cart</button></div>
+        </div>
+    </section>
+
+   
+    <section id="perfumes">
+        <h2>🌸 Exclusive Perfumes</h2>
+        <div class="product-grid">
+            <div class="product"><img src="assessts/perfume 1.jpeg"><h3>Savage</h3><p>Rs 1,900</p><button onclick="addToCart('Savage')">Add to Cart</button></div>
+            <div class="product"><img src="assessts/perfume2.jpeg"><h3>Red Milli</h3><p>Rs 1,300</p><button onclick="addToCart('Red Milli')">Add to Cart</button></div>
+            <div class="product"><img src="assessts/perfume3.jpeg"><h3>Office</h3><p>Rs 2,300</p><button onclick="addToCart('Office')">Add to Cart</button></div>
+            <div class="product"><img src="assessts/perfume4.jpeg"><h3>Intensely</h3><p>Rs 3,200</p><button onclick="addToCart('Intensely')">Add to Cart</button></div>
+            <div class="product"><img src="assessts/perfume5.jpeg"><h3>Intense</h3><p>Rs 1,100</p><button onclick="addToCart('Intense')">Add to Cart</button></div>
+        </div>
+    </section>
+
+    
+    <section id="iphones">
+        <h2>📱 Latest iPhones</h2>
+        <div class="product-grid">
+            <div class="product"><img src="assessts/iphone 12.jpeg"><h3>iPhone 12 Pro</h3><p>Rs 73,000</p><button onclick="addToCart('iPhone 12 Pro')">Add to Cart</button></div>
+            <div class="product"><img src="assessts/iphone 14.jpeg"><h3>iPhone 14 Pro</h3><p>Rs 110,000</p><button onclick="addToCart('iPhone 14 Pro')">Add to Cart</button></div>
+            <div class="product"><img src="assessts/iphone x.jpeg"><h3>iPhone X</h3><p>Rs 47,000</p><button onclick="addToCart('iPhone X')">Add to Cart</button></div>
+        </div>
+    </section>
+
+    
+    <section id="accessories">
+        <h2>🎧 Accessories</h2>
+        <div class="product-grid">
+            <div class="product"><img src="assessts/1pods.jpeg"><h3>AirPods</h3><p>Rs 2,000</p><button onclick="addToCart('AirPods')">Add to Cart</button></div>
+            <div class="product"><img src="assessts/cover.jpeg"><h3>iPhone Cover</h3><p>Rs 400</p><button onclick="addToCart('iPhone Cover')">Add to Cart</button></div>
+            <div class="product"><img src="assessts/uxury.jpeg"><h3>Luxury Cover</h3><p>Rs 750</p><button onclick="addToCart('Luxury Cover')">Add to Cart</button></div>
+            <div class="product"><img src="assessts/transperant.jpeg"><h3>Transparent Cover</h3><p>Rs 300</p><button onclick="addToCart('Transparent Cover')">Add to Cart</button></div>
+            <div class="product"><img src="assessts/silicone.jpeg"><h3>Silicone Cover</h3><p>Rs 370</p><button onclick="addToCart('Silicone Cover')">Add to Cart</button></div>
+        </div>
+    </section>
+   
+<div id="cartSidebar" class="cart-sidebar">
+  <h2>🛒 Your Cart</h2>
+  <div id="cartItems"></div>
+  <button onclick="closeCart()" class="close-btn">Close</button>
+</div>
+
+   
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h3>Elite Store</h3>
+                <p>Your trusted store for luxury watches, perfumes, iPhones & accessories.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#watches">Watches</a></li>
+                    <li><a href="#perfumes">Perfumes</a></li>
+                    <li><a href="#iphones">iPhones</a></li>
+                    <li><a href="#accessories">Accessories</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:support@elitestore.com">support@elitestore.com</a></p>
+                <p>Phone: +92 300 9214479</p>
+            </div>
+        </div>
+        <p id="datetime" class="datetime"></p>
+        <p class="footer-bottom">© 2025 Elite Store | Designed by <strong>Usman Minhas</strong></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
